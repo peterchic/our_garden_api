@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 20170607025610) do
     t.integer  "farmer_id"
     t.integer  "product_id"
     t.integer  "quantity"
-    t.decimal  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "price",      precision: 30, scale: 2
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "farmers", force: :cascade do |t|
