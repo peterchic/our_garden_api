@@ -4,11 +4,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :farmers, only: [:index, :create, :show, :destroy, :update]
       resources :products, only: [:index, :create, :show, :destroy, :update]
-      resources :farmer_products, only: [:index, :create, :show]
+      resources :farmer_products, only: [:index, :create, :show, :update]
       resources :reviews, only: [:index, :create, :show, :destroy, :update]
       resources :users, only: [:index, :create, :show, :destroy, :update]
       resources :carts, only: [:index, :create, :show, :destroy, :update]
-      resources :product_carts, only: [:index, :create]
+      resources :product_carts, only: [:index, :create, :show]
       post "/sign_in", to: "users#sign_in"
     end
   end

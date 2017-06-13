@@ -65,8 +65,8 @@ ActiveRecord::Schema.define(version: 20170607025610) do
   create_table "reviews", force: :cascade do |t|
     t.integer  "farmer_id"
     t.integer  "user_id"
-    t.text     "review"
-    t.integer  "rating"
+    t.string   "review"
+    t.string   "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

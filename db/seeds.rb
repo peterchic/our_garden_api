@@ -39,7 +39,7 @@ product_cart = ProductCart.create([{farmer_product_id: 1, cart_id:1}])
     }])
 end
 
-Product.create([{name:"Squash", description:"Squash in season. Pick yours up today!", picture:"https://static.meijer.com/Media/000/00000/0000000040679_a1c1_0200.png"}])
+Product.create([{name:"Zucchini", description:"Zucchini in season. Pick yours up today!", picture:"https://static.meijer.com/Media/000/00000/0000000040679_a1c1_0200.png"}])
 Product.create([{name:"Sweet Potatoes", description:"Sweet Potatoes are the healthiest of all potatoes!", picture:"https://d2lnr5mha7bycj.cloudfront.net/product-image/file/primary_55575dbe-fbb3-4486-b3fa-20b5263986f4.jpg"}])
 Product.create([{name:"Strawberries", description:"Red and ready to eat.", picture:"http://www.whatsfresh.co.nz/images/produce/strawberries-200x200.jpg"}])
 Product.create([{name:"Tomatos", description:"What would-ah Momma think if you didn't buy her tomatos?", picture:"http://www.weallnepali.com/_/rsrc/1341542807038/recipe/achar-1/tomatoachar/tomato.jpg?height=200&width=200"}])
