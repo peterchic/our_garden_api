@@ -15,6 +15,20 @@ class Api::V1::ReviewsController < ApplicationController
     render json: review
   end
 
+  def update
+    review = Review.find(params[:id])
+    review.update(review_params)
+    render json: review
+  end
+
+  def destroy
+    # byebug
+    review = Review.find(params[:id])
+    review.destroy
+    reviews = Review.all
+    render json: reviews
+  end
+
   private
   def review_params
     params.require(:review).permit(:review, :rating, :farmer_id, :user_id)

@@ -43,7 +43,7 @@ Product.create([{name:"Zucchini", description:"Zucchini in season. Pick yours up
 Product.create([{name:"Sweet Potatoes", description:"Sweet Potatoes are the healthiest of all potatoes!", picture:"https://d2lnr5mha7bycj.cloudfront.net/product-image/file/primary_55575dbe-fbb3-4486-b3fa-20b5263986f4.jpg"}])
 Product.create([{name:"Strawberries", description:"Red and ready to eat.", picture:"http://www.whatsfresh.co.nz/images/produce/strawberries-200x200.jpg"}])
 Product.create([{name:"Tomatos", description:"What would-ah Momma think if you didn't buy her tomatos?", picture:"http://www.weallnepali.com/_/rsrc/1341542807038/recipe/achar-1/tomatoachar/tomato.jpg?height=200&width=200"}])
-Product.create([{name:"Apples", description:"Apple a day keeps teh doctor away.", picture:"https://mnhardy.umn.edu/sites/mnhardy.umn.edu/files/styles/panopoly_image_original/public/apples_haralson.jpg?itok=xEbAgMdP"}])
+Product.create([{name:"Apples", description:"Apple a day keeps the doctor away.", picture:"https://mnhardy.umn.edu/sites/mnhardy.umn.edu/files/styles/panopoly_image_original/public/apples_haralson.jpg?itok=xEbAgMdP"}])
 Product.create([{name:"Celery", description:"Eat too much and they're poisonous!", picture:"http://www.smart-fertilizer.com/Cms_Data/Contents/smart-esp/Media/Crop/celery.jpg"}])
 Product.create([{name:"Carrots", description:"Great for night vision and plenty of vitamins!", picture:"https://sowtrueseed-7b55.kxcdn.com/wp-content/uploads/2015/08/t-carrots.jpg"}])
 Product.create([{name:"Garlic", description:"Huge for immunity", picture:"https://crapesinbloom.locallygrown.net/files/product/image/85996/small/Silver_White___Silverskin__Garlic.jpg?1350617198"}])
