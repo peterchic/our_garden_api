@@ -10,3 +10,11 @@ class User < ApplicationRecord
 
   validates_presence_of :username
 end
+
+
+
+  # has_one :cart
+  # has_many :reviews
+  # has_many :farmers, through: :reviews
+  #
+  # validates_presence_of :username
