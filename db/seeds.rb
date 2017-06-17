@@ -9,9 +9,8 @@
 # farmers = Farmer.create([{ username:"Joe", password_digest:"123", name:"Joe Berry", bio:"I love to farm, and I love to sell.", address: "123 Dirt Road, Jackson, NJ", zip_code: "07719", certified_organic: true, local: false, picture:"http://www.linkedIn.com/joeberry"}])
 # strawberries = Product.create([{ name:"Strawberries", description:"Red and juicy. Filled with powerful antioxidants", picture:"http://www.google.com/strawberry"}])
 # squash = Product.create([{name:"Green Squash", description:"Squash in season. Pick yours up today!", picture:"www.google.com/squash"}])
-user = User.create([{username:"Peter", password_digest:"123", name:"Peter Chicarielli", picture:"www.peterchic.com", bio:"Love to garden and travel. Rasta!"}])
-cart = Cart.create([{user_id:1, active_cart: true}])
-review = Review.create([{farmer_id:1, user_id:1, review:"What a great location. Clean living!", rating: 5}])
+# cart = Cart.create([{user_id:1, active_cart: true}])
+# review = Review.create([{farmer_id:1, user_id:1, review:"What a great location. Clean living!", rating: 5}])
 farmer_product = FarmerProduct.create([{farmer_id: 1, product_id: 1, quantity: 30, price: 2}])
 farmer_product = FarmerProduct.create([{farmer_id: 1, product_id: 2, quantity: 25, price: 4}])
 farmer_product = FarmerProduct.create([{farmer_id: 1, product_id: 3, quantity: 66, price: 3.5}])
@@ -22,7 +21,7 @@ farmer_product = FarmerProduct.create([{farmer_id: 8, product_id: 7, quantity: 1
 farmer_product = FarmerProduct.create([{farmer_id: 8, product_id: 9, quantity: 45, price: 0.5}])
 farmer_product = FarmerProduct.create([{farmer_id: 8, product_id: 3, quantity: 11, price: 3.5}])
 farmer_product = FarmerProduct.create([{farmer_id: 9, product_id: 5, quantity: 60, price: 8}])
-product_cart = ProductCart.create([{farmer_product_id: 1, cart_id:1}])
+# product_cart = ProductCart.create([{farmer_product_id: 1, cart_id:1}])
 
 
 10.times do
