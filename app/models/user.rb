@@ -9,6 +9,12 @@ class User < ApplicationRecord
   has_many :reviews
 
   validates_presence_of :username
+
+  def current_cart
+    self.carts.find do |cart|
+      cart.active_cart
+    end
+  end
 end
 
 

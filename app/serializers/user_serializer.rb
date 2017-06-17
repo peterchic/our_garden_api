@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :bio, :picture, :carts, :products
+  attributes :id, :username, :bio, :picture, :current_cart, :products
 
   # def products
   #   object.cart.products
