@@ -1,6 +1,8 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :username, :bio, :picture, :current_cart, :products
 
+  # has_many :carts
+
   # def products
   #   object.cart.products
   # end
