@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :users, only: [:index, :create, :show, :destroy, :update]
       resources :carts, only: [:index, :create, :show, :destroy, :update]
       resources :product_carts, only: [:index, :create, :show]
-      post "/sign_in", to: "users#sign_in"
+      post "/login", to: "users#login"
       post "/decode_token", to: "users#decode_token"
     end
   end

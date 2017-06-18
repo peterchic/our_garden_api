@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :products, through: :farmer_products
   has_many :reviews
 
-  validates_presence_of :username
+  validates_presence_of :username, :password
 
   def current_cart
     self.carts.find do |cart|
