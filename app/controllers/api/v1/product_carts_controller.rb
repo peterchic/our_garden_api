@@ -30,7 +30,7 @@ class Api::V1::ProductCartsController < ApplicationController
     product_cart = ProductCart.find(params[:id])
     product_cart.destroy
     # product_carts = ProductCart.all
-    render json: product_carts
+    render json: product_cart
   end
 
 private
