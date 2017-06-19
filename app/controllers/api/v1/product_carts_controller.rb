@@ -25,6 +25,14 @@ class Api::V1::ProductCartsController < ApplicationController
       render json: product_cart
   end
 
+  def destroy
+    # byebug
+    product_cart = ProductCart.find(params[:id])
+    product_cart.destroy
+    # product_carts = ProductCart.all
+    render json: product_carts
+  end
+
 private
 
   def prod_cart_params

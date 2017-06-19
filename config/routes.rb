@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index, :create, :show, :destroy, :update]
       resources :users, only: [:index, :create, :show, :destroy, :update]
       resources :carts, only: [:index, :create, :show, :destroy, :update]
-      resources :product_carts, only: [:index, :create, :show]
+      resources :product_carts, only: [:index, :create, :show, :destroy, :update]
       post "/login", to: "users#login"
       post "/decode_token", to: "users#decode_token"
     end

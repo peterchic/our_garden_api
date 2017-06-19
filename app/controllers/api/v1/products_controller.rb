@@ -8,4 +8,6 @@ class Api::V1::ProductsController < ApplicationController
     product = Product.find(params[:id])
     render json: product
   end
+
+
 end
