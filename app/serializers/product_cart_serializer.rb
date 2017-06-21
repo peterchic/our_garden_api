@@ -1,8 +1,7 @@
-class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :bio, :picture, :current_cart, :cart_id
-
+class ProductCartSerializer < ActiveModel::Serializer
+  attributes :current_cart
   def current_cart
-    object.current_cart.first.product_carts.each_with_object({}) do |product_cart, acc|
+    object.cart.product_carts.each_with_object({}) do |product_cart, acc|
       acc[product_cart.farmer_product.product.name] = {
         info: product_cart.farmer_product.product,
         quantity: product_cart.quantity,
@@ -11,11 +10,4 @@ class UserSerializer < ActiveModel::Serializer
       }
     end
   end
-
-
-  def cart_id
-    object.current_cart.first.id
-  end
-
-
 end

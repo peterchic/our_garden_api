@@ -15,7 +15,7 @@ class Api::V1::ProductCartsController < ApplicationController
 
     farmer_product.update(:quantity => new_quantity)
     product_cart.save
-    render json: {product_cart: product_cart, farmer_product: farmer_product}
+    render json: product_cart
   end
 
   def update
