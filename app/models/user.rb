@@ -11,9 +11,7 @@ class User < ApplicationRecord
   validates_presence_of :username, :password
 
   def current_cart
-    self.carts.find do |cart|
-      cart.active_cart
-    end
+    self.carts.where(active_cart: true)
   end
 end
 
