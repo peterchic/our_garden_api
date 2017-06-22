@@ -28,18 +28,27 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def update
+    user = User.find(params[:id])
+    user.update(user_params)
+    render json: user
+  end
+
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
+    redirect_to "http://localhost:3001/login"
+  end
+
   def decode_token
     jwt = JWT.decode(params[:token], ENV['JWT_SECRET'], ENV['JWT_ALGORITHM'])
     user = User.find(jwt[0]['user_id'])
     render json: user
-    # else
-    # render json: {error: 'DECODE NOT WOKRING'}, status: 400
-    # end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :username, :password, :bio)
+    params.require(:user).permit(:name, :username, :password, :bio, :picture)
   end
 end
