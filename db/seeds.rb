@@ -40,19 +40,25 @@ farmer_product = FarmerProduct.create([{farmer_id: 10, product_id: 11, quantity:
 # product_cart = ProductCart.create([{farmer_product_id: 1, cart_id:1}])
 
 
-10.times do
-  Farmer.create([{
-    username: Faker::Superhero.name,
-    password_digest: 1,
-    name: Faker::Name.name,
-    bio: Faker::Lorem.paragraphs(1),
-    address: Faker::Address.street_address,
-    zip_code: Faker::Address.zip,
-    certified_organic: Faker::Boolean.boolean,
-    local: Faker::Boolean.boolean,
-    picture: Faker::Avatar.image,
-    }])
-end
+# 10.times do
+#   Farmer.create([{
+#     username: Faker::Superhero.name,
+#     password_digest: 1,
+#     name: Faker::Name.name,
+#     bio: Faker::Lorem.paragraphs(1),
+#     address: Faker::Address.street_address,
+#     zip_code: Faker::Address.zip,
+#     certified_organic: Faker::Boolean.boolean,
+#     local: Faker::Boolean.boolean,
+#     picture: Faker::Avatar.image,
+#     }])
+# end
+
+Farmer.create([{username:'Fred Williams', password_digest:'1', name:'Fred Williams', bio:'Great up in Southern Kentucky where I learned to grow corn, cattle and cranberries. Never stopped loving the dirt, and I reckon I never will.', address:'', zip_code:'', certified_organic: true, local: true, picture: 'http://imgur.com/SPNDF2w.jpg'}])
+
+
+
+
 Product.create([{name:"Zucchini", description:"Zucchini is a popular variety of summer squash that can be consumed raw or cooked. The flower is also edible.", picture:"http://imgur.com/GFxFtAY.jpg"}])
 Product.create([{name:"Sweet Potatoes", description:"Sweet potatoes are high in vitamin A, B5, B6, niacin, riboflavin, and, due to their orange color, are high in carotenoids.", picture:"http://imgur.com/CmXGvBh.jpg"}])
 Product.create([{name:"Strawberries", description:"Strawberries are the only fruit that wear their seeds on the outside. The average berry is adorned with some 200 of them.", picture:"http://i.imgur.com/ZOU3TBP.jpg"}])
