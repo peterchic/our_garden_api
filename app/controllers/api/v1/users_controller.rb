@@ -17,6 +17,11 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def show
+    user = User.find(params[:id])
+    render json: user
+  end
+
   def create
     user = User.new(user_params)
     if user.save
@@ -37,7 +42,7 @@ class Api::V1::UsersController < ApplicationController
   def destroy
     user = User.find(params[:id])
     user.destroy
-    redirect_to "http://localhost:3001"
+    render json: user
   end
 
   def decode_token
