@@ -13,7 +13,7 @@ class Api::V1::UsersController < ApplicationController
       )
       render json: {user: UserSerializer.new(user), token: token}
     else
-      render json: {error: "No account or password Found"}
+      render json: {error: "No account or password found"}
     end
   end
 

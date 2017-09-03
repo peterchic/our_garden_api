@@ -11,7 +11,11 @@ class Api::V1::ReviewsController < ApplicationController
 
   def create
     # byebug
-    review = Review.create(review_params)
+    review = Review.new(review_params)
+    user = User.find(params[:review][:user_id])
+    thumbnail = user.picture
+    review.user_thumbnail = thumbnail
+    review.save
     render json: review
   end
 

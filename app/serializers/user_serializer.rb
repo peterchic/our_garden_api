@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :bio, :picture, :current_cart, :cart_id
+  attributes :id, :name, :username, :bio, :picture, :current_cart, :cart_id
 
   def current_cart
     object.current_cart.first.product_carts.each_with_object({}) do |product_cart, acc|
