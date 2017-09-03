@@ -35,7 +35,8 @@ class Api::V1::UsersController < ApplicationController
 
   def update
     user = User.find(params[:id])
-    user.update(user_params)
+    # byebug
+    user.update(user_params) unless params[:user].blank?
     render json: user
   end
 
