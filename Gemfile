@@ -21,6 +21,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'active_model_serializers'
 gem 'jwt'
 gem "figaro"
+gem 'pg'
 
 
 # Use Capistrano for deployment
@@ -43,9 +44,8 @@ group :development do
   gem 'pg'
 end
 
-group :production do
-  gem 'pg'
-end
+# group :production do
+# end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
