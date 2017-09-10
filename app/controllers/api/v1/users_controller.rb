@@ -6,6 +6,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def login
+    # byebug
     user = User.find_by(username: params[:username])
     if(user && user.authenticate(params[:password]))
       token = JWT.encode(
@@ -23,7 +24,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
+    # byebug
+    user = User.new( name: params[:name],
+                     username: params[:username],
+                     password: params[:password],
+                     bio: params[:bio],
+                     picture: params[:picture] )
     if user.save
       user.carts.create(active_cart: true)
       token = JWT.encode({user_id: user.id}, ENV["JWT_SECRET"], ENV["JWT_ALGORITHM"])
