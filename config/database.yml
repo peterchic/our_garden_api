@@ -14,16 +14,12 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: our_garden_production
-  pool: 5
-  timeout: 5000
-
-  # production:
-  # <<: *default
-  #   url: <%= ENV['DATABASE_URL'] %>
+# production:
+#   adapter: postgresql
+#   encoding: utf8
+#   database: our_garden_production
+#   pool: 5
+#   timeout: 5000
 
 
 
@@ -41,8 +37,8 @@ production:
 #   <<: *default
 #   database: our_garden_test
 #
-# production:
-#   <<: *default
-#   database: our_garden_production
-#   username: our_garden
-#   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: our_garden_production
+  username: our_garden
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
