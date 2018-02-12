@@ -12,10 +12,8 @@ class UserSerializer < ActiveModel::Serializer
     end
   end
 
-
   def cart_id
     object.current_cart.first.id
   end
-
 
 end

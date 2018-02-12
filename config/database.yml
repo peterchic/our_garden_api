@@ -3,7 +3,6 @@ development:
   encoding: utf8
   database: our_garden_development
   host: localhost
-  # pool: 5
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -14,31 +13,9 @@ test:
   pool: 5
   timeout: 5000
 
-# production:
-#   adapter: postgresql
-#   encoding: utf8
-#   database: our_garden_production
-#   pool: 5
-#   timeout: 5000
-
-
-
-
-#   default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#
-# development:
-#   <<: *default
-#   database: our_garden_development
-#
-# test:
-#   <<: *default
-#   database: our_garden_test
-#
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: utf8
   database: our_garden_production
-  username: our_garden
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  pool: 5
+  timeout: 5000

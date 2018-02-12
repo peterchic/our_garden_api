@@ -10,7 +10,6 @@ class Api::V1::ReviewsController < ApplicationController
   end
 
   def create
-    # byebug
     review = Review.new(review_params)
     user = User.find(params[:review][:user_id])
     thumbnail = user.picture
@@ -20,14 +19,12 @@ class Api::V1::ReviewsController < ApplicationController
   end
 
   def update
-    # byebug
     review = Review.find(params[:id])
     review.update(review_params)
     render json: review
   end
 
   def destroy
-    # byebug
     review = Review.find(params[:id])
     review.destroy
     reviews = Review.all

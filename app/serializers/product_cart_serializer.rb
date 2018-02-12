@@ -1,5 +1,6 @@
 class ProductCartSerializer < ActiveModel::Serializer
   attributes :current_cart, :farmer_product
+  
   def current_cart
     object.cart.product_carts.each_with_object({}) do |product_cart, acc|
       acc[product_cart.farmer_product.product.name] = {

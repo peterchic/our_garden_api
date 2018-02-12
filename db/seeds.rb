@@ -1,19 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-# farmers = Farmer.create([{ username:"Joe", password_digest:"123", name:"Joe Berry", bio:"I love to farm, and I love to sell.", address: "123 Dirt Road, Jackson, NJ", zip_code: "07719", certified_organic: true, local: false, picture:"http://www.linkedIn.com/joeberry"}])
-# strawberries = Product.create([{ name:"Strawberries", description:"Red and juicy. Filled with powerful antioxidants", picture:"http://www.google.com/strawberry"}])
-# squash = Product.create([{name:"Green Squash", description:"Squash in season. Pick yours up today!", picture:"www.google.com/squash"}])
-# cart = Cart.create([{user_id:1, active_cart: true}])
-# review = Review.create([{farmer_id:1, user_id:1, review:"What a great location. Clean living!", rating: 5}])
-
-
-
 Farmer.create([{username:'Fred Williams', password_digest:'1', name:'Fred Williams', bio:'Grew up in Southern Kentucky where I learned to grow corn, cattle and cranberries. Never stopped loving the dirt, and I reckon I never will.', address:'', zip_code:'', certified_organic: true, local: true, picture: 'http://imgur.com/zKXY2Bz.jpg'}])
 Farmer.create([{username:'Barney Gumble', password_digest:'1', name:'Daria Gumble', bio:"Farming is what I love to do when I'm not farming or fishing, or thinking about either of those other two options.", address:'', zip_code:'', certified_organic: true, local: true, picture: 'http://imgur.com/ZwduATy.jpg'}])
 Farmer.create([{username:'Stacy Dash', password_digest:'1', name:'Stacy Dash', bio:"Farming is something I never thought I'd get into, but now that I have, I'm able to feed my family and create a small profit on the side.", address:'', zip_code:'', certified_organic: true, local: true, picture: 'http://imgur.com/pXuOPuX.jpg'}])
@@ -67,19 +51,3 @@ farmer_product = FarmerProduct.create([{farmer_id: 9, product_id: 5, quantity: 6
 farmer_product = FarmerProduct.create([{farmer_id: 10, product_id: 8, quantity: 33, price: 4}])
 farmer_product = FarmerProduct.create([{farmer_id: 10, product_id: 5, quantity: 23, price: 2}])
 farmer_product = FarmerProduct.create([{farmer_id: 10, product_id: 11, quantity: 22, price: 7}])
-# product_cart = ProductCart.create([{farmer_product_id: 1, cart_id:1}])
-
-
-# 10.times do
-#   Farmer.create([{
-#     username: Faker::Superhero.name,
-#     password_digest: 1,
-#     name: Faker::Name.name,
-#     bio: Faker::Lorem.paragraphs(1),
-#     address: Faker::Address.street_address,
-#     zip_code: Faker::Address.zip,
-#     certified_organic: Faker::Boolean.boolean,
-#     local: Faker::Boolean.boolean,
-#     picture: Faker::Avatar.image,
-#     }])
-# end
